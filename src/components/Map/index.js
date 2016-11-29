@@ -1,5 +1,6 @@
 import React from 'react';
-import { withGoogleMap, GoogleMap, Marker, } from "react-google-maps";
+import { withGoogleMap, GoogleMap, Marker,  } from "react-google-maps";
+// import { } from 'react-google-maps/lib'
 import R from 'ramda'
 import './contact.css'
 import Overlay from './overlay';

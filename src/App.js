@@ -6,7 +6,6 @@ import axios from 'axios'
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
 import { lightBlue900 } from 'material-ui/styles/colors'
 const muiTheme = getMuiTheme({
   palette: {
@@ -34,9 +33,6 @@ const styles = {
   }
 }
 class App extends Component {
-  // static contextTypes = {
-  //   router: PropTypes.object
-  // }
   constructor(props) {
     super(props);
     this.state = {
@@ -79,9 +75,7 @@ class App extends Component {
     this.changeBeneficiary = this.setSelectedFilter.bind(this, 'categorie')
   }
   setSelectedFilter(key, value) {
-    const selectedFilters = R.isEmpty(value) ?
-       R.dissoc(key, this.state.selectedFilters) :
-       R.assoc(key, value, this.state.selectedFilters)
+    const selectedFilters = R.assoc(key, value, this.state.selectedFilters)
     this.setState({
       selectedFilters,
     })
@@ -107,7 +101,7 @@ class App extends Component {
   }
 
   handleClose = () => this.setState({open: !this.state.open});
-  render(){
+  render() {
     let children = null;
       children = React.cloneElement(this.props.children, {
         // markers: this.state.markers,
