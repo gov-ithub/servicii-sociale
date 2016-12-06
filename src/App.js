@@ -7,7 +7,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Dialog from 'material-ui/Dialog'
 import IconButton from 'material-ui/IconButton'
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
-
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { lightBlue900, white } from 'material-ui/styles/colors'
 const muiTheme = getMuiTheme({
@@ -80,7 +79,7 @@ class App extends Component {
   }
   componentDidMount() {
     axios
-      .get('https://socent.cezarneaga.eu/test.json')
+      .get('http://harta-furnizori.mmuncii.ro/data.json')
       .then(data => {
         const districtsMap = data.data.providers.map(marker => marker.jud)
         const districts = districtsMap.filter((v,i) => districtsMap.indexOf(v) === i)
