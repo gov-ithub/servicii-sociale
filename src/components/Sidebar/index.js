@@ -157,7 +157,6 @@ const Sidebar = (props) => {
               placeholder={ 'Tipul serviciului' }
               onUpdate={ (event) => {
                 props.changeCategory(event.value)
-                console.log(event);
               } }
               menuStyle={{maxHeight: 250, overflow: 'scroll'}}
             >
