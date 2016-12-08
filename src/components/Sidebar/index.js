@@ -32,7 +32,7 @@ belle.style.comboBox.hoverStyle =
   })
 belle.style.comboBox.wrapperStyle =
   R.merge(belle.style.comboBox.wrapperStyle, {
-    padding:'20px 0'
+    padding:'10px 0'
   })
 belle.style.comboBox.focusStyle =
   R.merge(belle.style.comboBox.focusStyle, {
