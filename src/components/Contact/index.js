@@ -156,7 +156,6 @@ const Contact = (props) => {
           </TwoThirds>
         </Over>
       </DetailsCard>
->>>>>>> New Contact page
     </Container>
   )
 };
