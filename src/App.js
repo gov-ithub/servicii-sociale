@@ -84,7 +84,7 @@ class App extends Component {
   }
   componentDidMount() {
     axios
-      .get('/data.json')
+      .get('http://harta-furnizori.mmuncii.ro/data.json')
       .then(data => {
         const districtsMap = data.data.providers.map(marker => marker.jud)
         const districts = districtsMap.filter((v,i) => districtsMap.indexOf(v) === i).sort()
