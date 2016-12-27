@@ -15,8 +15,7 @@ import LocalPostOffice from 'material-ui/svg-icons/maps/local-post-office';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 import SocialNotifications from 'material-ui/svg-icons/social/notifications';
-import { Select, Option } from 'belle';
-import belle from 'belle';
+import belle, { Select, Option } from 'belle';
 import R from 'ramda'
 import './sidebar.css'
 
