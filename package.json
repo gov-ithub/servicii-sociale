@@ -12,7 +12,7 @@
   "dependencies": {
     "array.prototype.find": "^2.0.1",
     "axios": "^0.15.2",
-    "belle": "https://github.com/cezarneaga/belle/tarball/6b04d1761e5304b13debe2b6a26d0bd3f683f106",
+    "belle": "cezarneaga/belle",
     "history": "^4.4.1",
     "material-ui": "^0.16.4",
     "ramda": "^0.22.1",
@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
