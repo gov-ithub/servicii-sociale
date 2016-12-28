@@ -93,7 +93,7 @@ class App extends Component {
         const categories = servicesMap.filter((v,i) => servicesMap.indexOf(v) === i)
         const newMarkers = data.data.providers.map(marker => {
           const category = marker.cod
-            ? data.data.ss.find(service => service.cod === marker.cod).cat
+            ? R.find(service => service.cod === marker.cod)(data.data.ss).cat
             : null
           const slug = `${getSlug(marker.name)}-${marker.id}`
           return Object.assign(marker, {category, slug})
