@@ -118,16 +118,24 @@ class App extends Component {
   }
 
   handleDisclaimer = () => this.setState({disclaimerOpen: !this.state.disclaimerOpen});
+
   handleClose = () => this.setState({open: !this.state.open});
+
   handleBack = () => {
     this.setState({open: !this.state.open})
-    this.props.route.history.push("/")
+    this.props.route.history.goBack()
+  };
+  pageBack = () => {
+    this.props.route.history.goBack()
   };
   render() {
     let children = null;
       children = React.cloneElement(this.props.children, {
         ...this.state,
-        onMarkerClick: this.onMarkerClick.bind(this), handleBack: this.handleBack, setZoom: this.setZoom
+        onMarkerClick: this.onMarkerClick,
+        handleBack: this.handleBack,
+        pageBack: this.pageBack,
+        setZoom: this.setZoom
       })
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
