@@ -12,7 +12,7 @@
     "sw-precache": "^4.3.0"
   },
   "dependencies": {
-    "axios": "^0.15.2",
+    "axios": "^0.21.1",
     "belle": "^3.0.1",
     "history": "^4.4.1",
     "material-ui": "^0.16.4",
